@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #132232;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make nav a horizontal container aligned to the right */
+nav {
+    position: absolute;  /* position relative to header */
+    top: 20px;           /* adjust vertical alignment to match header image */
+    right: 40px;         /* distance from right edge */
+    z-index: 3;          /* above hero image */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;       /* horizontal layout */
+    gap: 50px;         
+    margin: 0;
+    margin-top: 110px;
+    padding: 0;
+    background: #fff;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 800;
+    color: #24738e;
+    font-size: 22px;
+
+}
+
+.nav-links :hover{
+    color: #d73b67; 
+    transition: ease-in 0.5s;
+}
+
+.header-text {
+    position: absolute;
+    top: 0;
+    margin-top: -620px;
+    left: -78px;
+    width:105%; 
+    z-index: 2;  
+}
+
+.hero-img {
+    position: absolute;
+    top: -20px;
+    height: 1000px;
+    left: 0;
+    width:160%;
+    z-index: 1;
+}
+
+.cut-out{
+    position: absolute;
+    z-index: 3;
+    top: 280px;
+    left: -80px;
+    height: 65%;
+    width: auto;
+}
+
+h1, h2 {
+    position: relative;
+    z-index: 4;
+    top: 600px;
+    left: 440px;
+    padding: 0;
+    color: #fff;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 58px;
+    padding: 0;
+    height: 66px;
+}
+
+h2 {
+    font-weight: 200;
+    padding-top: 30px;
+    font-size: 38px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 38px;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 26px;
+    padding-top: 20px;
+}
+
+h5 {
+    position: relative;
+    padding: 0;
+    color: #fff;
+    z-index: 10;
+    text-align: center;    
+    max-width: 600px;          /* can adjust */
+    margin: 0 auto; 
+    font-weight: 800;
+    font-size: 58px;
+    margin-top: 450px;           /* centers the block itself */
+}
+
+h6 {
+    position: relative;
+    padding: 0;
+    color: #fff;
+    z-index: 10;
+    text-align: left;          /* keeps text left-aligned */
+    max-width: 1000px;          /* can adjust */
+    margin: 0 auto; 
+    font-size: 24px;
+    font-weight: 400;
+    top: 50px;             /* centers the block itself */
+}
+
+
+
+.main {
+    margin-top: 740px;
+    z-index: 5;
+    display: block;
+    left: auto;
+    right: auto;
+    padding-left: 60px;
+    margin-bottom: 0;
+}
+
+
+.bluephoto > img,
+.yellowphoto > img,
+.pinkphoto > img {
+    position: relative;
+    width: 70%;
+    height: auto;
+    padding: 0;
+    z-index: 1; /* ensure background stays behind */
+    margin-top: 100px;
+}
+
+.text-overlay.yellow-text {
+    color: #FFB700; 
+    margin-top: -40px; 
+}
+
+.text-overlay.pink-text {
+    color: #FA708F; 
+    margin-top: -40px; 
+}
+
+.text-overlay.blue-text {
+    color: #0FB8C5; 
+    margin-top: -40px; 
+}
+
+
+
+.yellowphoto h3, .yellowphoto h4 {
+    color: #FFB700;
+}
+
+.pinkphoto h3, .pinkphoto h4 {
+    color: #FA708F;
+}
+
+h3 {
+    margin-top: -30px;
+}
+
+h3, h4 {
+    line-height: 0.5;
+    z-index: 10;
+    margin: 10px;
+}
+
+.bluephoto {
+margin-top: 50px;
+}
+
+/* Make the figure the reference point */
+.bluephoto, .yellowphoto, .pinkphoto {
+    position: relative; /* absolutely positioned children use this as reference */
+}
+
+/* Stars overlay */
+.bstars, .ystars, .pstars {
+    position: relative;  /* flow under text */
+    width: 400px !important;       
+    height: auto;
+    margin-top: -120px;    /* space between text and stars */
+    margin-left: -40px;
+    z-index: 10;         /* above background */
+}
+
+/* Text overlay */
+.text-overlay {
+    position: absolute;        
+    top: 400px;                 /* distance from top of image */
+    left: 840px;                /* distance from left */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;    /* stack lines vertically */
+    gap: 5px;                  /* space between h3 lines */
+    color: #0FB8C5;   
+    margin-top: 0px;         /* per section color */
+}
+
+.text-overlay h4 {
+    margin-top: 0px;
+    font-weight: 400;
+}
+
+footer {
+    height: 200px;           
+    position: relative;       /* reference for absolutely positioned content */
+    overflow: hidden;
+}
+
+footer img {
+    height: 100%;             /* fill entire footer height */
+    width: 100%;
+    object-fit: cover;     
+}
+
+.footer-content {
+    position: absolute;       /* overlay text on image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;            /* use flexbox to center content */
+    flex-direction: column;   /* stack vertically */
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+    
+    gap: 10px;                /* space between lines */
+    z-index: 10;              /* text above image */
+}
+
+.footer-content p {
+    font-weight: 400;
+    font-size: 24px;    
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;     
+}
+
+.blue-can, .yellow-can, .pink-can {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: auto;
+    z-index: 5;     /* above background, below text if needed */
+    pointer-events: none; /* prevents interaction issues */
+    transform: rotate(-20deg);
+}
+
+.blue-can {
+    top: 100px;
+    left: -350px;
+}
+
+.yellow-can {
+    top: 100px;
+    left: -350px;
+}
+
+.pink-can {
+    top: 100px;
+    left: -350px;
+}
